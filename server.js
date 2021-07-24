@@ -22,6 +22,10 @@ connection.once('open', () => {
 const usersRouter = require('./routes/users')
 app.use('/users', usersRouter)
 
+app.use('/', (req, res) => {
+    res.send('teacher info db')
+})
+
 
 app.listen(port, () => {
     console.log(`server running on ${port}`)
